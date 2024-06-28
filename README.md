@@ -292,13 +292,40 @@ power management:
     PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
 ```
 10. Run the command **uname -a**. ***(1 mark)*** __Fill answer here__.
-11. What is the available free memory in the system. ***(1 mark)*** __Fill answer here__.
-12. What is the available disk space mounted on /workspace. ***(1 mark)*** __Fill answer here__.
+```bash
+Linux codespaces-73c92c 6.5.0-1022-azure #23~22.04.1-Ubuntu SMP Thu May  9 17:59:24 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
+```
+11. What is the available free memory in the system. ***(1 mark)*** 366Mi.
+12. What is the available disk space mounted on /workspace. ***(1 mark)*** 6.31Gi.
 13. Name the version and hardware architecture of the linux Virtual environment. ***(1 mark)*** __Fill answer here__.
-14. What is the difference between **ls** vs **ls -asl**. ***(1 mark)*** __Fill answer here__.
+```bash
+Linux codespaces-73c92c 6.5.0-1022-azure #23~22.04.1-Ubuntu SMP Thu May  9 17:59:24 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
+```
+14. What is the difference between **ls** vs **ls -asl**. ***(1 mark)*** 
+  -ls command to list file and directory
+  -ls -asl command used to provide a more detailed listing such as file permissions, size and last modified time.
+
 15. What is the TLB size of the Virtual CPU. ***(1 mark)*** __Fill answer here__.
+```bash
+processor       : 0
+TLB size        : 2560 4K pages
+
+processor       : 1
+TLB size        : 2560 4K pages
+```
 16. What is the CPU speed of the Virtual CPU. ***(1 mark)*** __Fill answer here__.
+```bash
+processor       : 0
+cpu MHz         : 2607.118
+
+processor       : 1
+cpu MHz         : 3147.918
+```
 17. What is the top running process that consumes the most CPU cycles. ***(1 mark)*** __Fill answer here__.
+```bash
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND                                                                                 
+    564 codespa+  20   0   11.3g 133112  49408 S   0.3   1.6   0:04.12 node 
+```
 
 ## Running your own container instance.
 
