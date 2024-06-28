@@ -407,10 +407,23 @@ At the terminal, create a new directory called **myroot**, and run a instance of
 
 @joeynor ➜ /workspaces/OSProject/myroot (main) $ docker run --detach -it -v /workspaces/OSProject/myroot:/root debian
 ```
-
+```bash
+@fayms ➜ /workspaces/OSProject (main) $ mkdir myroot
+@fayms ➜ /workspaces/OSProject (main) $ cd myroot/
+@fayms ➜ /workspaces/OSProject/myroot (main) $ pwd
+/workspaces/OSProject/myroot
+@fayms ➜ /workspaces/OSProject/myroot (main) $ docker run --detach -it -v /workspaces.OSProject/myroot:/root debian
+e24bd94a143300cfa0a88c5685babbb8388cf4ce338df72e2e5d9f69aeac1cec
+```
 ***Questions:***
 
 1. Check the permission of the files created in myroot, what user and group is the files created in docker container on the host virtual machine? . ***(2 mark)*** __Fill answer here__.
+```bash
+total 36
+-rw-rw-rw-  1 codespace root      27158 Jun 28 14:09 README.md
+drwxrwxrwx+ 2 codespace root       4096 Jun 28 12:59 images
+drwxrwxrwx+ 2 codespace codespace  4096 Jun 28 13:45 myroot
+```
 2. Can you change the permission of the files to user codespace.  You will need this to be able to commit and get points for this question. ***(2 mark)***
 ```bash
 //use sudo and chown
@@ -418,6 +431,17 @@ sudo chown -R codespace:codespace myroot
 
 ```
 *** __Fill answer here__.***
+```bash
+fayms ➜ /workspaces/OSProject (main) $ sudo chown -R codespace:codespace myroot
+@fayms ➜ /workspaces/OSProject (main) $ ls -l /workspaces/OSProject/myroot
+total 0
+@fayms ➜ /workspaces/OSProject (main) $ ls -la /workspaces/OSProject/myroot
+total 8
+drwxrwxrwx+ 2 codespace codespace 4096 Jun 28 13:45 .
+drwxrwxrwx+ 5 codespace root      4096 Jun 28 13:45 ..
+@fayms ➜ /workspaces/OSProject (main) $ id
+uid=1000(codespace) gid=1000(codespace) groups=1000(codespace),106(ssh),107(docker),989(pipx),990(python),991(oryx),992(golang),993(sdkman),994(rvm),995(php),996(conda),997(nvs),998(nvm),999(hugo)
+```
 
 ## You are on your own, create your own static webpage
 
