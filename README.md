@@ -341,6 +341,11 @@ CONTAINER ID   IMAGE     COMMAND   CREATED         STATUS         PORTS     NAME
 f65be1987f84   debian    "bash"    4 minutes ago   Up 4 minutes             romantic_jackson
 ```
 
+```bash
+CONTAINER ID   IMAGE     COMMAND   CREATED              STATUS              PORTS     NAMES
+f7f27e0664e0   debian    "bash"    About a minute ago   Up About a minute             sad_tharp
+```
+
 3. Keep note of the name used by your container, this is usually given random names unless you specify your own name. Now run a bash command on the container. Make sure you use the name of your container instead of the one shown here. 
 ```bash
 docker exec -i -t romantic_jackson /bin/bash
@@ -385,8 +390,8 @@ f65be1987f84   debian    "bash"    19 minutes ago   Exited (137) 18 seconds ago 
 
 ***Questions:***
 
-1. Are files in the container persistent. Why not?. ***(1 mark)*** __Fill answer here__.
-2. Can we run two, or three instances of debian linux? . ***(1 mark)*** __Fill answer here__.
+1. Are files in the container persistent. Why not?. ***(1 mark)*** - No it's not persistent because once you remove the file, the file will not be saved.
+2. Can we run two, or three instances of debian linux? . ***(1 mark)*** Yes.
 
 ## Running your own container with persistent storage
 
